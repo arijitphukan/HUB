@@ -50,7 +50,7 @@
     <div class="container blur rounded-3 cstmshadow fade-in-page border border-light" style="max-width: 540px;">
 
                 <div class="position-relative">
-                    <img src="{{url('/images/Registrationimg.jpg')}}" alt="img" class="rounded-circle position-absolute top-0 start-50 translate-middle" style="width: 120px; height:120px;">
+                    <img src="{{url('/images/Loginimg.jpg')}}" alt="img" class="rounded-circle position-absolute top-0 start-50 translate-middle" style="width: 120px; height:120px;">
                 </div>
                 <div class="d-flex justify-content-center pt-5">
                     <h2 class="display-6 word text-white text-uppercase mt-3">Registration</h2>
