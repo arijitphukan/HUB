@@ -11,21 +11,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
 </head>
 <style>
-    .nav-item{
-        background: linear-gradient(to top, aqua,white);
-
+    .nav-item:hover{
+        background: linear-gradient(to top, #2e79bbd5, #ffffff00);
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+    .nav-item .nav-link:hover{
+        color: white;
+        transform: translateY(-2px);
+        transition: 0.3s;
     }
     .nav-link{
         font-family: "Merriweather", serif;
         font-optical-sizing: auto;
-        font-weight: <weight>;
+        font-weight: 400;
         font-style: normal;
         font-variation-settings:"wdth" 100;
     }
     .uword{
         font-family: "Source Serif 4", serif;
         font-optical-sizing: auto;
-        font-weight: <weight>;
+        font-weight: 500;
         font-style: normal;
     }
 </style>
@@ -37,22 +43,22 @@
             </button>
             <a class="navbar-brand" href="#">Navbar</a>
             <div class="collapse navbar-collapse " id="navbarTogglerDemo03">
-            <ul class="navbar-nav mx-auto my-2 gap-2 gap-md-4">
-                <li class="nav-item px-2 py-1">
+            <ul class="navbar-nav mx-auto my-2 gap-2 gap-md-2">
+                <li class="nav-item px-2 ">
                     <a class="nav-link active text-uppercase" aria-current="page" href="#">Dashboard</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item px-2 ">
                     <a class="nav-link active text-uppercase" aria-current="page" href="#">Analytics</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item px-2 ">
                     <a class="nav-link active text-uppercase" href="#">Collection</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item px-2 ">
                     <a class="nav-link active text-uppercase" href="">Profile</a>
                 </li>
             </ul>
             <div class="me-2">
-                <button class="btn btn-primary uword" onclick="window.location.href='{{route('homepage')}}'">Home</button>
+                <button class="btn btn-primary uword" onclick="window.location.href='{{route('homepage')}}'"><i class="bi bi-person-gear me-2"></i>Home</button>
             </div>
             </div>
         </div>

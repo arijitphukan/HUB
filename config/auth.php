@@ -41,26 +41,6 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-        'admin' => [
-            'driver' => 'session',
-            'provider' => 'admins',
-        ],
-        'department' => [
-            'driver' => 'session',
-            'provider' => 'departments',
-        ],
-        'subdepartment' => [
-            'driver' => 'session',
-            'provider' => 'subdepartments',
-        ],
-        'application' => [
-            'driver' => 'session',
-            'provider' => 'applications',
-        ],
-        'forwardapp' => [
-            'driver' => 'session',
-            'provider' => 'forwardapps',
-        ],
     ],
 
     /*
@@ -82,29 +62,10 @@ return [
 
     'providers' => [
         'users' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\User::class,
+            'driver' => 'database',
+            'table' => 'users',
         ],
-        'admins' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Admin::class,
-        ],
-        'departments' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Department::class,
-        ],
-        'subdepartments' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Subdepartment::class,
-        ],
-        'applications' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Application::class,
-        ],
-        'forwardapps' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Forwardapp::class,
-        ],
+
 
         // 'users' => [
         //     'driver' => 'database',
