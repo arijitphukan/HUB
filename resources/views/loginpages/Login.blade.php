@@ -13,7 +13,7 @@
 </head>
 <style>
     .bgimage{
-        background: linear-gradient(to bottom, #89f7fe,#66a6ff);
+        background: linear-gradient(to bottom, #308cc6,#225399);
         height: 100vh;
     }
     .blur{
@@ -54,7 +54,7 @@
             <img src="{{url('/images/Loginimg.jpg')}}" class="rounded-circle position-absolute top-0 start-50 translate-middle" alt="img" style="height:120px; width:120px;">
         </div>
         <div class="mt-5 d-flex justify-content-center">
-            <h2 class="py-3 display-4 word text-white text-uppercase">LOGIN</h2>
+            <h2 class="py-3 display-5 word text-white text-uppercase">LOGIN</h2>
         </div>
         <form>
             <div class="mb-3 mx-auto">
@@ -75,7 +75,7 @@
 
         </form>
         <div class="mb-2 d-flex justify-content-center gap-1">
-            <p class="word text-white">Don't have an ID?</p><a class="word text-decoration-none registerbtn" href="{{route('register')}}" style="color: rgb(70, 128, 236)">Create one here.</a>
+            <p class="word text-white">Don't have an ID?</p><a class="word text-decoration-none registerbtn" href="{{route('register')}}" style="color: rgb(255, 225, 0)">Create one here.</a>
         </div>
     </div>
 </body>

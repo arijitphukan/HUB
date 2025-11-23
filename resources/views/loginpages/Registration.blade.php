@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <style>
     .bgimage{
-        background: linear-gradient(to bottom, #89f7fe,#66a6ff);
+        background: linear-gradient(to bottom, #308cc6,#225399);
         height: 100vh;
     }
     .blur{
@@ -53,7 +53,7 @@
                     <img src="{{url('/images/Loginimg.jpg')}}" alt="img" class="rounded-circle position-absolute top-0 start-50 translate-middle" style="width: 120px; height:120px;">
                 </div>
                 <div class="d-flex justify-content-center pt-5">
-                    <h2 class="display-6 word text-white text-uppercase mt-3">Registration</h2>
+                    <h2 class="display-5 word text-white text-uppercase mt-3">Registration</h2>
                 </div>
                 <form action="" class="mx-3">
                     <div class="mb-3 mx-auto">
@@ -78,7 +78,7 @@
                     </div>
                 </form>
         <div class="mb-2 d-flex justify-content-center gap-1">
-            <p class="word text-white">Already have an ID?</p><a class="word text-decoration-none loginpgbtn" href="{{route('login')}}" style="color: rgb(70, 128, 236)">Login here.</a>
+            <p class="word text-white">Already have an ID?</p><a class="word text-decoration-none loginpgbtn" href="{{route('login')}}" style="color: rgb(255, 225, 0)">Login here.</a>
         </div>
     </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>

@@ -34,32 +34,40 @@
         font-weight: 500;
         font-style: normal;
     }
+    .edge{
+        border-radius: 0;
+    }
+    @media (min-width:768px){
+        .edge{
+            border-radius: 50rem;
+        }
+    }
 </style>
 <body>
-    <nav class="navbar navbar-expand-lg bg-info-subtle">
+    <nav class="navbar navbar-expand-lg bg-info-subtle edge sticky-top">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="#">Navbar</a>
             <div class="collapse navbar-collapse " id="navbarTogglerDemo03">
-            <ul class="navbar-nav mx-auto my-2 gap-2 gap-md-2">
-                <li class="nav-item px-2 ">
-                    <a class="nav-link active text-uppercase" aria-current="page" href="#">Dashboard</a>
-                </li>
-                <li class="nav-item px-2 ">
-                    <a class="nav-link active text-uppercase" aria-current="page" href="#">Analytics</a>
-                </li>
-                <li class="nav-item px-2 ">
-                    <a class="nav-link active text-uppercase" href="#">Collection</a>
-                </li>
-                <li class="nav-item px-2 ">
-                    <a class="nav-link active text-uppercase" href="">Profile</a>
-                </li>
-            </ul>
-            <div class="me-2">
-                <button class="btn btn-primary uword" onclick="window.location.href='{{route('homepage')}}'"><i class="bi bi-person-gear me-2"></i>Home</button>
-            </div>
+                <ul class="navbar-nav mx-auto my-2 gap-2 gap-md-2">
+                    <li class="nav-item px-2 ">
+                        <a class="nav-link active text-uppercase" aria-current="page" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item px-2 ">
+                        <a class="nav-link active text-uppercase" aria-current="page" href="#">Analytics</a>
+                    </li>
+                    <li class="nav-item px-2 d-md-none">
+                        <a class="nav-link active text-uppercase" href="#">Collection</a>
+                    </li>
+                    <li class="nav-item px-2 ">
+                        <a class="nav-link active text-uppercase" href="">Profile</a>
+                    </li>
+                </ul>
+                <div class="me-2">
+                    <button class="btn btn-primary uword" onclick="window.location.href='{{route('homepage')}}'"><i class="bi bi-person-gear me-2"></i>Home</button>
+                </div>
             </div>
         </div>
     </nav>
