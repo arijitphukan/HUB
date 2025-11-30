@@ -80,12 +80,13 @@
             <p class="word text-white">Don't have an ID?</p><a class="word text-decoration-none registerbtn" href="{{route('register')}}" style="color: rgb(255, 225, 0)">Create one here.</a>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+        // Wait until the page is fully loaded
+        window.addEventListener('load', () => {
+        document.querySelector('.fade-in-page').classList.add('show');
+        });
+    </script>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-<script>
-    // Wait until the page is fully loaded
-    window.addEventListener('load', () => {
-      document.querySelector('.fade-in-page').classList.add('show');
-    });
-</script>
+
 </html>
