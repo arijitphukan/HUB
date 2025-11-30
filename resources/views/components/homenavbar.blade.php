@@ -46,13 +46,13 @@
                 <div class="collapse navbar-collapse py-2" id="navbarTogglerDemo01">
                     <ul class="navbar-nav d-flex justify-content-center align-items-center mx-auto gap-3">
                         <li class="nav-item px-2">
-                            <a class="nav-link fs-5 text-uppercase text-white" aria-current="page" href="#">Home</a>
+                            <a class="nav-link fs-5 text-uppercase text-white" href="{{route('homepage')}}">Home</a>
                         </li>
                         <li class="nav-item px-2">
-                            <a class="nav-link fs-5 text-uppercase text-white" href="#">Games</a>
+                            <a class="nav-link fs-5 text-uppercase text-white" href="{{route('gamepage')}}">Games</a>
                         </li>
                         <li class="nav-item px-2">
-                            <a class="nav-link fs-5 text-uppercase text-white" href="#">Comics</a>
+                            <a class="nav-link fs-5 text-uppercase text-white" href="{{route('comicpage')}}">Comics</a>
                         </li>
                         <li class="nav-item px-2">
                             <a class="nav-link fs-5 text-uppercase text-white" href="#">Feedbacks</a>

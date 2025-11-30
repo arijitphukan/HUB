@@ -56,23 +56,25 @@
         <div class="mt-5 d-flex justify-content-center">
             <h2 class="py-3 display-5 word text-white text-uppercase">LOGIN</h2>
         </div>
-        <form>
+        <form action="{{route('login')}}" method="post" class="mx-2">
+            @csrf
             <div class="mb-3 mx-auto">
-                <label for="exampleInputEmail1" class="form-label fs-5 text-white word"><i class="bi bi-file-person ms-2 me-1"></i>User ID</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label for="exampleUsername" class="form-label fs-5 text-white word"><i class="bi bi-file-person ms-2 me-1"></i>Username</label>
+                <input type="text" class="form-control" id="exampleUsername" name="username">
+                <div>@error('username'){{$message}}@enderror</div>
             </div>
             <div class="mb-3 mx-auto">
-                <label for="exampleInputPassword1" class="form-label fs-5 text-white word"><i class="bi bi-pass ms-2 me-1"></i>Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <label for="exampleInputPassword1" class="form-label fs-5 text-white word"><i class="bi bi-file-earmark-lock2 ms-2 me-1"></i>Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                <div>@error('password'){{$message}}@enderror</div>
             </div>
             <div class="mb-3 d-flex justify-content-end me-2">
                 <a class="word text-decoration-none text-white forgotpass" href="#">Forgot password?</a>
             </div>
             <div class="mx-auto mb-3 d-flex justify-content-center gap-2">
-                <button type="button" onclick="window.location.href='{{route('userdash')}}'" class="btn btn-primary word w-50">Login</button>
+                <button type="submit" class="btn btn-primary word w-50">Login</button>
                 <button type="button" onclick="window.location.href='{{route('homepage')}}'" class="btn btn-danger word w-50">Cancel</button>
             </div>
-
         </form>
         <div class="mb-2 d-flex justify-content-center gap-1">
             <p class="word text-white">Don't have an ID?</p><a class="word text-decoration-none registerbtn" href="{{route('register')}}" style="color: rgb(255, 225, 0)">Create one here.</a>

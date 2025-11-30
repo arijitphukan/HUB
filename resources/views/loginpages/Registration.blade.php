@@ -46,47 +46,64 @@
     }
     </style>
 </head>
-<body class="bgimage d-flex justify-content-center align-items-center">
-    <div class="container blur rounded-3 cstmshadow fade-in-page border border-light" style="max-width: 540px;">
-
-                <div class="position-relative">
-                    <img src="{{url('/images/Loginimg.jpg')}}" alt="img" class="rounded-circle position-absolute top-0 start-50 translate-middle" style="width: 120px; height:120px;">
+<body>
+    <div class="d-flex flex-column">
+        <div class="flex-grow-1 bgimage" style="min-height: 100vh;">
+            <div class="container-fluid blur rounded-3 cstmshadow fade-in-page border border-light my-4" style="max-width: 620px;">
+                <div class="d-flex justify-content-center">
+                    <h2 class="display-5 word text-white text-uppercase mt-1">Registration</h2>
                 </div>
-                <div class="d-flex justify-content-center pt-5">
-                    <h2 class="display-5 word text-white text-uppercase mt-3">Registration</h2>
-                </div>
-                <form action="" class="mx-3">
-                    <div class="mb-3 mx-auto">
-                        <label for="exampleInputname" class="form-label fs-5 text-white word">Name</label>
-                        <input type="text" class="form-control" id="exampleInputname">
+                <form action="{{route('register')}}" method="POST" class="mx-2">
+                    @csrf
+                    <div class="mb-2 mx-auto">
+                        <label for="exampleInputname" class="form-label fs-5 text-white word"><i class="bi bi-person-circle ms-2 me-1"></i>Name</label>
+                        <input type="text" class="form-control" id="exampleInputname" name="name">
+                        <div>@error('name'){{$message}} @enderror</div>
                     </div>
-                    <div class="mb-3 mx-auto">
-                        <label for="exampleInputEmail1" class="form-label fs-5 text-white word">Email</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div class="mb-2 mx-auto">
+                        <label for="exampleInputEmail1" class="form-label fs-5 text-white word"><i class="bi bi-envelope-at ms-2 me-1"></i>Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="emial">
+                        <div>@error('email'){{$message}} @enderror</div>
                     </div>
-                    <div class="mb-3 mx-auto">
-                        <label for="exampleInputPassword1" class="form-label fs-5 text-white word">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    <div class="mb-2 mx-auto">
+                        <label for="exampleUserName" class="form-label fs-5 text-white word"><i class="bi bi-file-person ms-2 me-1"></i>Username</label>
+                        <input type="text" class="form-control" id="exampleUserName" name="username">
+                        <div>@error('username'){{$message}} @enderror</div>
                     </div>
-                    <div class="mb-3 mx-auto">
-                        <label for="exampleInputDOB" class="form-label fs-5 text-white word">Date of Birth</label>
-                        <input type="date" class="form-control" id="exampleInputDOB">
+                    <div class="row">
+                        <div class="col mb-2 mx-auto">
+                            <label for="exampleInputPassword1" class="form-label fs-5 text-white word"><i class="bi bi-file-earmark-lock2 ms-2 me-1"></i>Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                            <div>@error('password'){{$message}} @enderror</div>
+                        </div>
+                        <div class="col mb-2 mx-auto">
+                            <label for="exampleInputConfirmPassword1" class="form-label fs-5 text-white word"><i class="bi bi-file-earmark-lock2 ms-2 me-1"></i>Confirm Password</label>
+                            <input type="password" class="form-control" id="exampleInputConfirmPassword1" name="confirm_password">
+                            <div>@error('confirm_password'){{$message}} @enderror</div>
+                        </div>
                     </div>
-                    <div class="mx-auto mb-3 d-flex justify-content-center gap-2">
+                    <div class="mb-2 mx-auto">
+                        <label for="exampleInputDOB" class="form-label fs-5 text-white word"><i class="bi bi-calendar2 ms-2 me-1"></i>Date of Birth</label>
+                        <input type="date" class="form-control" id="exampleInputDOB" name="date_of_birth">
+                        <div>@error('date_of_birth'){{$message}} @enderror</div>
+                    </div>
+                    <div class="mx-auto mb-2 d-flex justify-content-center gap-2">
                         <button type="submit" class="btn btn-primary word w-50">Register</button>
                         <button type="button" onclick="window.location.href='{{route('homepage')}}'" class="btn btn-danger word w-50">Cancel</button>
                     </div>
+                    <div class="my-1 d-flex justify-content-center gap-1">
+                        <p class="word text-white">Already have an ID?</p><a class="word text-decoration-none loginpgbtn" href="{{route('login')}}" style="color: rgb(255, 225, 0)">Login here.</a>
+                    </div>
                 </form>
-        <div class="mb-2 d-flex justify-content-center gap-1">
-            <p class="word text-white">Already have an ID?</p><a class="word text-decoration-none loginpgbtn" href="{{route('login')}}" style="color: rgb(255, 225, 0)">Login here.</a>
+            </div>
         </div>
     </div>
+</body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 <script>
-    // Wait until the page is fully loaded
     window.addEventListener('load', () => {
       document.querySelector('.fade-in-page').classList.add('show');
     });
 </script>
-</body>
+
 </html>
