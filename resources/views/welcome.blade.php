@@ -74,9 +74,9 @@
                 <source src="{{ url('/images/video1.mp4') }}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <div class="container-fluid gradientcont fade-in-page" style="min-height: 100vh;">
-                <h1 class="d-flex justify-content-center text-uppercase text-white par display-1 pt-3 hiddentxt1" id="textDiv1" data-visible-class="visibletxt1">The gaming hub</h1>
-                <div class="row">
+            <div class="container-fluid gradientcont fade-in-page pt-3" style="min-height: 100vh;">
+                <h1 class="d-flex justify-content-center text-uppercase text-white par display-1 pt-5 hiddentxt1" id="textDiv1" data-visible-class="visibletxt1">The gaming hub</h1>
+                <div class="row mb-3">
                     <div class="col-12 col-md-7 hiddentxt" id="textDiv" data-visible-class="visibletxt">
                         <h1 class="part display-4 text-uppercase gradword">Browse or Publish Games</h1>
                         <p class="text-white part fs-4">Welcome to our <strong class="fst-italic">Gaming Hub</strong> — your ultimate destination to browse, play, and publish games!</p>
@@ -139,7 +139,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="mt-3">
+                <div class="mt-5">
                     <h1 class="mb-4 d-flex justify-content-center text-uppercase text-white par display-1 hiddentxt" id="txtDiv2" data-visible-class="visibletxt">The Comic hub</h1>
                     <div class="row pb-3">
                         <div class="col-4 hiddenimg" id="imgDiv1" data-visible-class="visibleimg">
@@ -203,11 +203,43 @@
                     </div>
                 </div>
             </div>
-            <div class="py-4 px-5" style="background: azure;">
-                <h1 class="d-flex justify-content-center text-uppercase mb-4 word" style="color: #5acdfe">Feedbacks</h1>
-                <div class="bg-info rounded-4 p-5">
+            <div class="container-fluid p-0 p-md-5" style="background: azure;">
+                <h1 class="d-flex justify-content-center text-uppercase mb-4 word display-5" style="color: #5acdfe;">Feedbacks</h1>
+                <div class="container rounded p-5 shadow-sm w-100" style="background: #3d93eeb2; color:azure">
                     fvfbxcf
                 </div>
+            </div>
+            <div class="container-fluid py-5 px-4" style="background: azure;">
+                <h1 class="word text-uppercase d-flex justify-content-center mb-3 display-5" style="color: #5acdfe;">Submit Feedback and Suggestion</h1>
+                <form>
+                    <div class="container border border-white shadow p-4 rounded w-75" style="background: #3d93eeb2; color:azure">
+                        <div class="row mb-3">
+                            <div class="col">
+                                <h5 for="exampleFName" class="word">First Name</h5>
+                                <input type="text" class="form-control form-control-lg" id="exampleFName">
+                            </div>
+                            <div class="col">
+                                <h5 for="exampleLName" class="word">Last Name</h5>
+                                <input type="text" class="form-control form-control-lg" id="exampleLName">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <h5 for="exampleInputEmail" class="word">Email</h5>
+                            <input type="email" class="form-control form-control-lg" id="exampleInputEmail"></input>
+                        </div>
+                        <div class="mb-3">
+                            <h5 for="exampleInputFeedback" class="word">Feedback</h5>
+                            <textarea type="text" class="form-control form-control-lg" id="exampleInputFeedback"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <h5 for="exampleInputSuggestion" class="word">Suggestion</h5>
+                            <textarea type="text" class="form-control form-control-lg" id="exampleInputSuggestion"></textarea>
+                        </div>
+                        <div class="d-flex justify-content-center mb-2">
+                            <button type="submit" class="btn btn-primary word mt-2">Submit</button>
+                        </div>
+                    </div>
+                </form>
             </div>
             <div>
                 @include('components.footer')
@@ -226,7 +258,7 @@
                     entry.target.classList.remove(id); // if you want show only once remove this line
                 }
             });
-        },{ threshold:0.4 });
+        },{ threshold:0.3 });
 
         // Observe all 3 elements
         observer.observe(document.getElementById("textDiv1"));
